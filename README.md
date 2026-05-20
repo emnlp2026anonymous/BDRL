@@ -153,7 +153,7 @@ Expected output:
 dict[str, float]
 ```
 
-where each key is a SMILES string and each value is a normalized score. Higher scores should be better because `rl_finetuning.py` uses Boltz scores to replace or update molecule scores.
+where each key is a SMILES string and each value is a normalized score. 
 
 Reference:
 
