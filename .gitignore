@@ -1,0 +1,15 @@
+__pycache__/
+*.py[cod]
+
+.vscode/
+
+logs/
+rl_outputs/
+rl_ckpts/
+
+ckpt/
+*.pt
+*.pth
+*.ckpt
+
+data/ChEMBL_Smiles.csv
