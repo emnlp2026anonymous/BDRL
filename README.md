@@ -22,13 +22,38 @@ The default target used by the current scripts is `1SYH`, but the target-specifi
 +-- Pro_Filter.py               # LLM-based sample filtering agent
 +-- Fideli_Refiner.py           # LLM-based Boltz rescoring selection agent
 +-- data/
-|   +-- ChEMBL_Smiles.csv
+|   +-- ChEMBL_Smiles.csv       # user-provided; not included in this repository
 |   +-- vocab.txt
 +-- docking/
 |   +-- qvina02
 |   +-- targets/
 +-- oracle/
 ```
+
+## Data Preparation
+
+`data/ChEMBL_Smiles.csv` is not included in this repository because it is a large external dataset. Please download ChEMBL or prepare your own SMILES corpus, then place the CSV file at:
+
+```text
+data/ChEMBL_Smiles.csv
+```
+
+The CSV must contain a column named `Smiles`, for example:
+
+```text
+Smiles
+CCO
+CCN
+c1ccccc1
+```
+
+The default vocabulary file is included at:
+
+```text
+data/vocab.txt
+```
+
+If you use a different SMILES corpus, verify that `data/vocab.txt` covers all tokens in your dataset, or regenerate the vocabulary before pretraining.
 
 ## Stage 1: Model Pretraining
 
